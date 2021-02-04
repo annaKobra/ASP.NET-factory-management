@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>Employees information</h2>
+
+<form class="form-inline my-2 my-lg-0" method="post" action="/Employee/Search">
+    <input name="phrase" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <input type="submit" value="Search" class="btn btn-default" />
+    @if (TempData["searchedList"] != null)
+    { 
+        @Html.ActionLink("Back To All Employees", "Index", null, new { @class = "btn btn-info" })
+    }
+</form>
+<br />
+
+<table class="table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Starting Work Year</th>
+        <th>Department</th>
+        <th>Shifts</th>
+        <th></th>
+    </tr>
+
+    @foreach (var emp in ViewBag.employees)
+    {
+        <tr>
+            <td>@emp.FirstName</td>
+            <td>@emp.LastName</td>
+            <td>@emp.YearStarted</td>
+            <td>@emp.DepName</td>
+            <td>
+                <!--Shifts is new model ShiftsForEmpDTO-->
+                @foreach (var empShifts in ViewBag.shifts)
+                {
+                    if (emp.EmpId == empShifts.EmpId)
+                    {
+                        <div class="bg-info" style="margin: 1px">
+                            @empShifts.DateAndTimeShift
+                        </div>
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { empId = @emp.EmpId }, new { @class = "btn btn-link" }) |
+                @Html.ActionLink("Delete", "Delete", new { empId = @emp.EmpId }, new { @class = "btn btn-link" }) |
+                @Html.ActionLink("Add Shift", "AddShift", new { empId = @emp.EmpId }, new { @class = "btn btn-link" })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to Home Page", "GetHomePage", "Login")
+</div>

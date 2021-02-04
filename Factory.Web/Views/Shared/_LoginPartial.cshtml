@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "_LoginPartial";
+}
+    @using (Html.BeginForm("LogOut", "Login", FormMethod.Post, new { role = "form", @class = "form" }))
+    {
+        @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a>Hello,  @Session["userFullName"]</a></li>
+        <li><a>You num of Actions: @Session["AmountOfActions"]</a></li>
+        <li style="padding:10px 0;"><input type="submit" value="Logout" class="btn btn-default" /></li>
+    </ul>
+    }

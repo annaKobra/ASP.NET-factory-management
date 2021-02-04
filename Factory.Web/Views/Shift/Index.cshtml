@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Shifts information</h2>
+
+<p>
+    @Html.ActionLink("Add Shift", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Employees Registered</th>
+    </tr>
+
+    @foreach (var shift in ViewBag.shifts)
+    {
+        <tr>
+            <td>@shift.ShiftDate.ToString("dd/MM/yyyy")</td>
+            <td>@shift.StartTime</td>
+            <td>@shift.EndTime</td>
+            <td>
+                @foreach(var emp in ViewBag.employeeShifts)
+                {
+                    if (emp.ShiftId == shift.ID)
+                    {
+                        string emloyeeName = emp.EmpFullName;
+                        @Html.ActionLink(emloyeeName, "Edit", "Employee", new { empId = emp.EmpId }, new { @class = "btn btn-link" }) 
+                    }
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to Home Page", "GetHomePage", "Login")
+</div>

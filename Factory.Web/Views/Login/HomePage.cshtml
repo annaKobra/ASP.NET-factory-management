@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "HomePage";
+}
+<div class="jumbotron">
+    <h1>Welcome to Kolache Factory</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Employees</h2>
+        <p>All Employees data.</p>
+        <p>What you can do here -add</p>
+        <p>@Html.ActionLink("Employees", "Index", "Employee", null, new { @class = "btn btn-default" })</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Departments</h2>
+        <p>All Departments data.</p>
+        <p>What you can do here - add</p>
+        <p>@Html.ActionLink("Departments", "Index", "Department", null, new { @class = "btn btn-default" })</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Shifts</h2>
+        <p>All Shifts data.</p>
+        <p>What you can do here - add</p>
+        <p>@Html.ActionLink("Shifts", "Index", "Shift", null, new { @class = "btn btn-default" })</p>
+    </div>
+</div>
+
