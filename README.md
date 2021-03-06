@@ -16,14 +16,16 @@ and shifts - developed using ASP.NET, EntityFramework and MySQL.
 ## UI
 
 ### Login
-<img src="screenshots/login.png" align="center">
+![Login](screenshots/login.png)
 ### Home
-<img src="screenshots/main_page.png" align="center">
+![Home](screenshots/main_page.png)
 ### Employees
-<img src="screenshots/employees.png" align="center" width="56%"><img src="screenshots/edit_employee.png" align="center" width="42%">
+![Employees](screenshots/employees.png)
+### Edit Employee
+![Edit Employee](screenshots/edit_employee.png)
 ### Departments
-<img src="screenshots/departments.png" align="center">
+![Departments](screenshots/departments.png)
 ### Shifts
-<img src="screenshots/shifts.png" align="center">
+![Shifts](screenshots/shifts.png)
 
 
