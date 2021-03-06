@@ -17,14 +17,18 @@ and shifts - developed using ASP.NET, EntityFramework and MySQL.
 
 ### Login
 <img src="screenshots/login.png" align="center">
+
 ### Home
 <img src="screenshots/main_page.png" align="center">
 ### Employees
+
 <img src="screenshots/employees.png" align="center">
 <img src="screenshots/edit_employee.png" align="center">
 ### Departments
+
 <img src="screenshots/departments.png" align="center">
 ### Shifts
+
 <img src="screenshots/shifts.png" align="center">
 
 
