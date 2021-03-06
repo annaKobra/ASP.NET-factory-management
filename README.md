@@ -3,10 +3,6 @@
 An managment application with login authentication (manage and control the entire site), list of employees and employee search, departments
 and shifts - developed using ASP.NET, EntityFramework and MySQL.
 
-## Core Packages
-1. Angular Router (for routing)
-2. Angular Material (for styling)
-
 ## How To Run
 
 * Open solution in Visual Studio 2019
